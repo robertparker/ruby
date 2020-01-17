@@ -8178,6 +8178,7 @@ parse_numeric(struct parser_params *p, int c)
 	}
 	if (c >= '0' && c <= '7') {
 	    /* octal */
+      rb_warning("consider an 0o prefix for octal integers instead of 0.");
 	  octal_number:
 	    do {
 		if (c == '_') {
